@@ -48,10 +48,10 @@
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="javascript:;"><i
-                                class="flag-icon flag-icon-um"></i><span>English</span></a>
-                        <a class="dropdown-item" href="javascript:;"><i
-                                class="flag-icon flag-icon-np"></i><span>Nepali</span></a>
+                         @foreach($languages as $key=>$language)
+                            <a class="dropdown-item" href="javascript:;"><i
+                                    class="flag-icon flag-icon-@if($key == 'en')um @else{{$key}} @endif"></i><span>{{ucwords($language)}}</span></a>
+                        @endforeach
                     </div>
                 </li>
                 <li class="nav-item dropdown dropdown-user-profile">
@@ -59,7 +59,7 @@
                        data-toggle="dropdown">
                         <div class="media user-box align-items-center">
                             <div class="media-body user-info">
-                                <p class="user-name mb-0">Bikash Subedi</p>
+                                <p class="user-name mb-0">{{Auth::user()->name}}</p>
                                 <p class="designattion mb-0">Admin</p>
                             </div>
                             <img src="https://via.placeholder.com/110x110" class="user-img" alt="user avatar">

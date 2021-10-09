@@ -11,7 +11,7 @@ Route::get(PREFIX, function () {
 });
 
 
-Route::group(['namespace' => 'System', 'prefix' => PREFIX], function () {
+Route::group(['middleware' => ['language'], 'namespace' => 'System', 'prefix' => PREFIX], function () {
     Route::get('/login', 'Auth\LoginController@loginForm')->name('login.form');
     Route::post('/login', 'Auth\LoginController@login')->name('login');
     Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
