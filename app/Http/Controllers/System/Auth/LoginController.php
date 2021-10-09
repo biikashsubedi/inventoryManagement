@@ -19,7 +19,6 @@ class LoginController extends ResourceController
     public function __construct(LoginService $service)
     {
         parent::__construct($service);
-        $this->domain = (new LoginDomain());
     }
 
     public function loginForm()

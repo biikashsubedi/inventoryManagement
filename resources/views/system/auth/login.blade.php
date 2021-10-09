@@ -16,35 +16,36 @@
                             <div class="card-body p-md-5">
                                 <div class="text-center">
                                     <img src="{{asset('assets/images/logo-icon.png')}}" width="80" alt="">
-                                    <h3 class="mt-4 font-weight-bold">Welcome Back</h3>
+                                    <h3 class="mt-4 font-weight-bold">{{translate('Welcome Back')}}</h3>
                                 </div>
 
                                 <form action="{{route('login')}}" method="post">
                                     @csrf
                                     <div class="form-group mt-4">
-                                        <label>Account Detail</label>
+                                        <label>{{translate('Account Detail')}}</label>
                                         <input type="text" name="email"
                                                class="form-control @error('email') is-invalid @enderror"
-                                               placeholder="Enter your email, username or mobile"/>
+                                               placeholder="Enter your email, username or mobile" required/>
                                         @error('email')
-                                        <p class="invalid-text text-danger">{{$message}}</p>
+                                        <p class="invalid-text text-danger">{{translate($message)}}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Password</label>
+                                        <label>{{translate('Password')}}</label>
                                         <input type="password" name="password"
                                                class="form-control @error('password') is-invalid @enderror"
-                                               placeholder="Enter your password"/>
+                                               placeholder="Enter your password" required/>
                                         @error('password')
-                                        <p class="invalid-text text-danger">{{$message}}</p>
+                                        <p class="invalid-text text-danger">{{translate($message)}}</p>
                                         @enderror
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" name="attempt" class="custom-control-input" id="customSwitch1">
-                                                <label class="custom-control-label" for="customSwitch1">Remember
-                                                    Me</label>
+                                                <input type="checkbox" name="attempt" class="custom-control-input"
+                                                       id="customSwitch1">
+                                                <label class="custom-control-label" for="customSwitch1">
+                                                    {{translate('Remember Me')}}</label>
                                             </div>
                                         </div>
                                         <div class="form-group col text-right"><a href="#"><i
