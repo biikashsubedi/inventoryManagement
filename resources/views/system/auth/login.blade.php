@@ -48,7 +48,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group col text-right"><a href="#"><i
-                                                    class='bx bxs-key mr-2'></i>Forget Password?</a>
+                                                    class='bx bxs-key mr-2'></i>{{translate('Forget Password?')}}</a>
                                         </div>
                                     </div>
                                     <div class="btn-group mt-3 w-100">
