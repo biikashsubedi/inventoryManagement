@@ -15,7 +15,7 @@
                         <a href="javascript:;">
                             <div class="msg-header">
                                 <h6 class="msg-header-title">1 New</h6>
-                                <p class="msg-header-subtitle">System Notifications</p>
+                                <p class="msg-header-subtitle">{{translate('System Notifications')}}</p>
                             </div>
                         </a>
                         <div class="header-notifications-list">
@@ -33,7 +33,7 @@
                             </a>
                         </div>
                         <a href="javascript:;">
-                            <div class="text-center msg-footer">View All Notifications</div>
+                            <div class="text-center msg-footer">{{translate('View All Notifications')}}</div>
                         </a>
                     </div>
                 </li>
@@ -41,15 +41,13 @@
                     <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;"
                        data-toggle="dropdown">
                         <div class="lang d-flex">
-                            <div><i class="flag-icon flag-icon-um"></i>
-                            </div>
-                            <div><span>En</span>
+                            <div><i class="flag-icon flag-icon-@if($globalLocale == 'en')um @else{{'np'}}@endif"></i>
                             </div>
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                          @foreach($languages as $key=>$language)
-                            <a class="dropdown-item" href="javascript:;"><i
+                            <a class="dropdown-item" href="{{route('set.lang', $key ?? '')}}"><i
                                     class="flag-icon flag-icon-@if($key == 'en')um @else{{$key}} @endif"></i><span>{{ucwords($language)}}</span></a>
                         @endforeach
                     </div>
@@ -60,7 +58,7 @@
                         <div class="media user-box align-items-center">
                             <div class="media-body user-info">
                                 <p class="user-name mb-0">{{Auth::user()->name}}</p>
-                                <p class="designattion mb-0">Admin</p>
+                                <p class="designattion mb-0">{{translate('Admin')}}</p>
                             </div>
                             <img src="https://via.placeholder.com/110x110" class="user-img" alt="user avatar">
                         </div>
@@ -69,7 +67,7 @@
                                 class="bx bx-user"></i><span>Profile</span></a>
                         <div class="dropdown-divider mb-0"></div>
                         <a class="dropdown-item" href="{{route('logout')}}"><i
-                                class="bx bx-power-off"></i><span>Logout</span></a>
+                                class="bx bx-power-off"></i><span>{{translate('Logout')}}</span></a>
                     </div>
                 </li>
 
