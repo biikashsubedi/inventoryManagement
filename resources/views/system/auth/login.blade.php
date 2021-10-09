@@ -42,8 +42,7 @@
                                     <div class="form-row">
                                         <div class="form-group col">
                                             <div class="custom-control custom-switch">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch1"
-                                                       checked>
+                                                <input type="checkbox" name="attempt" class="custom-control-input" id="customSwitch1">
                                                 <label class="custom-control-label" for="customSwitch1">Remember
                                                     Me</label>
                                             </div>

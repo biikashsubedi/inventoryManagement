@@ -39,7 +39,10 @@ class LoginController extends ResourceController
                 return $this->customLockoutResponse($request);
             }
             $user = $this->service->loginType($request);
-            if (Auth::attempt($user)) {
+
+            $attempt = (!empty($request->attempt)) ? TRUE : FALSE;
+
+            if (Auth::attempt($user, $attempt)) {
                 setRoleCache(authUser());
 //                setConfigCookie();
 //                $this->createLoginLog($request);
