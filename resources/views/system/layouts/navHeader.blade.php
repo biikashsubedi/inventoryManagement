@@ -68,7 +68,7 @@
                     <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="javascript:;"><i
                                 class="bx bx-user"></i><span>Profile</span></a>
                         <div class="dropdown-divider mb-0"></div>
-                        <a class="dropdown-item" href="javascript:;"><i
+                        <a class="dropdown-item" href="{{route('logout')}}"><i
                                 class="bx bx-power-off"></i><span>Logout</span></a>
                     </div>
                 </li>
