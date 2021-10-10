@@ -93,7 +93,7 @@
                 <div class="ml-lg-auto mb-2 mb-lg-0">
                     <div class="btn-group-round">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-white">{{translate('Daiiy')}}</button>
+                            <button type="button" class="btn btn-white">{{translate('Daily')}}</button>
                             <button type="button" class="btn btn-white">{{translate('Weekly')}}</button>
                             <button type="button" class="btn btn-white">{{translate('Monthly')}}</button>
                         </div>

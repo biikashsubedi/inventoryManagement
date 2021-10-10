@@ -41,14 +41,14 @@
                     <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;"
                        data-toggle="dropdown">
                         <div class="lang d-flex">
-                            <div><i class="flag-icon flag-icon-@if($globalLocale == 'en')um @else{{'np'}}@endif"></i>
+                            <div><i class="flag-icon flag-icon-@if($globalLocale == 'ne')np @else{{'um'}}@endif"></i>
                             </div>
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                          @foreach($languages as $key=>$language)
                             <a class="dropdown-item" href="{{route('set.lang', $key ?? '')}}"><i
-                                    class="flag-icon flag-icon-@if($key == 'en')um @else{{$key}} @endif"></i><span>{{ucwords($language)}}</span></a>
+                                    class="flag-icon flag-icon-@if($key == 'ne')np @else{{$key}} @endif"></i><span>{{ucwords($language)}}</span></a>
                         @endforeach
                     </div>
                 </li>
